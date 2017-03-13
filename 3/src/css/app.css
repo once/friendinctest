@@ -1,0 +1,82 @@
+	/* Main page */
+
+div[data-page="index"] .page-content {
+
+	background: #FF7878;
+}
+
+.navbar  {
+
+	color: #FFFFFF;
+}
+
+div[data-page="index"] .navbar {
+
+	background: none;
+}
+
+
+div[data-page="index"] .navbar:after {
+
+	display: none;
+}
+
+.panel {
+
+	background: #FFE6E6;
+}
+
+.full-title {
+	margin: 33vh auto;
+	text-align: center;
+	font-size: 10vw;
+	color: #FFFFFF;
+}
+
+	/* Plugins page */
+
+div[data-page="plugins"] .navbar {
+
+	background: #D0021B;
+}
+
+.page-content {
+
+	background: #EDEDED;
+	padding-top: calc(44px + .8vh) !important;
+	padding-left: .8vh;
+	padding-right: .8vh;
+	padding-bottom: .8vh;
+}
+
+
+.grid-container {
+	
+	padding: 2%;
+	padding-top: 0;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border: 1px solid #E3E3E3;
+	background-color: #FFFFFF;
+}
+
+.grid-item {
+  	
+  	padding: 2vh;
+  	width: 20vw;
+  	border: 1px solid #C0C0C0;
+  	margin-top: 3vh;
+  
+  	display:flex;
+  	flex-direction: column;
+  	justify-content: center;
+}
+
+.label {
+	align-self: center;
+	text-align: center;
+	margin-top: 2vh;
+	
+}
