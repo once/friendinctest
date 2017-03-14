@@ -1,14 +1,13 @@
+
 	/* Main page */
 
 div[data-page="index"] .page-content {
 
 	background: #FF7878;
+	display: flex;
+	align-items: center;
 }
 
-.navbar  {
-
-	color: #FFFFFF;
-}
 
 div[data-page="index"] .navbar {
 
@@ -21,13 +20,9 @@ div[data-page="index"] .navbar:after {
 	display: none;
 }
 
-.panel {
 
-	background: #FFE6E6;
-}
-
-.full-title {
-	margin: 33vh auto;
+div[data-page="index"] .full-title {
+	
 	text-align: center;
 	font-size: 10vw;
 	color: #FFFFFF;
@@ -40,7 +35,7 @@ div[data-page="plugins"] .navbar {
 	background: #D0021B;
 }
 
-.page-content {
+div[data-page="plugins"] .page-content {
 
 	background: #EDEDED;
 	padding-top: calc(44px + .8vh) !important;
@@ -50,7 +45,7 @@ div[data-page="plugins"] .navbar {
 }
 
 
-.grid-container {
+div[data-page="plugins"] .grid-container {
 	
 	padding: 2%;
 	padding-top: 0;
@@ -62,7 +57,7 @@ div[data-page="plugins"] .navbar {
 	background-color: #FFFFFF;
 }
 
-.grid-item {
+div[data-page="plugins"] .grid-item {
   	
   	padding: 2vh;
   	width: 20vw;
@@ -74,7 +69,7 @@ div[data-page="plugins"] .navbar {
   	justify-content: center;
 }
 
-.label {
+div[data-page="plugins"] .label {
 	align-self: center;
 	text-align: center;
 	margin-top: 2vh;

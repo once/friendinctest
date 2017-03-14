@@ -1,0 +1,27 @@
+/* Common */
+
+html.small {
+	font-size: 10px;
+}
+
+html.standard {
+	font-size: 14px;	
+}
+
+html.wide {
+	font-size: 24px;
+}
+
+.panel {
+	font-size: 12px;
+	background: #FFE6E6;
+}
+
+.navbar  {
+
+	color: #FFFFFF;
+}
+
+.comment {
+	margin-top: 50px;
+}

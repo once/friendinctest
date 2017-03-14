@@ -1,0 +1,76 @@
+/* Main2 page */
+
+div[data-page="main2"] .page-content {
+
+	background: #FF7878;
+	display: flex;
+	align-items: center;
+}
+
+div[data-page="main2"] .navbar {
+
+	background: none;
+}
+
+div[data-page="main2"] .navbar:after {
+
+	display: none;
+}
+
+
+div[data-page="main2"] .full-title {
+	
+	text-align: center;
+	font-size: 3.5rem;
+	color: #FFFFFF;
+}
+
+	/* Plugins page */
+
+div[data-page="plugins2"] .navbar {
+
+	background: #D0021B;
+}
+
+div[data-page="plugins2"] .page-content {
+
+	
+	background: #EDEDED;
+    padding-top: 4.8rem !important;
+    padding-left: .3rem;
+    padding-right: .3rem;
+    padding-bottom: .3rem;
+}
+
+
+div[data-page="plugins2"] .grid-container {
+	
+	padding: .8rem;
+	padding-top: 0;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border: 1px solid #E3E3E3;
+	background-color: #FFFFFF;
+}
+
+div[data-page="plugins2"] .grid-item {
+  	
+  	padding: .5rem;
+  	width: 4rem;
+  	border: 1px solid #C0C0C0;
+  	margin-top: 1rem;
+  
+  	display:flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	flex-basis: 25%;
+}
+
+div[data-page="plugins2"] .label {
+	align-self: center;
+	text-align: center;
+	margin-top: 2vh;
+	
+}
