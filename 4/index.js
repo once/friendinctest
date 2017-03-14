@@ -3,26 +3,19 @@ var request = require('request'),
 	cheerio = require('cheerio'),
 	url = require('url');
 
-// https://gist.github.com/lukekarrys/4102152
-
-
-//var targetUrl = 'https://sale-russia.com/testing/t1.html',
 var startUrl = 'https://ru.wikipedia.org',
+	
+	host = url.parse(startUrl).host,
 	allLinks = [],
-	limit = 20;
+	limit = 1000;
 
 	processLink(startUrl);
-
-
 
 	function processLink(targetUrl) {
 
 		request(targetUrl, function (err, res, body) {
     	
-	    	if (err) {
-	    		console.log("Error : " + err);
-	    		return;
-	    	}
+	    		if (err) return;
 
 				var $ = cheerio.load(body),
 						links = $("a");
@@ -35,10 +28,16 @@ var startUrl = 'https://ru.wikipedia.org',
 
 						if (allLinks.length < limit) {
 							
-							href = url.resolve(targetUrl, href);
-							allLinks.push(href);
+							href = url.resolve(startUrl, href);
 
-							processLink(href);
+							if (linkBelongsToUrl(href)) {
+								
+								allLinks.push(href);
+								processLink(href);
+
+							}
+							
+							
 						}
 						else {
 							done();
@@ -46,14 +45,18 @@ var startUrl = 'https://ru.wikipedia.org',
 					} 
 
 				});
-				
-			
-	    	
 	    
 		});
 
+	}
+
+	function linkBelongsToUrl(link) {
+
+		return (link.indexOf(host) > -1);
 
 	}
+
+
 	function printLinks(){ 
 		
 		for (var i=0;i < allLinks.length; i++) {
